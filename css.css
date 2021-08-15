@@ -1,0 +1,42 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: solid 1px black;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 37%;
+}
+button {
+  height: 45px;
+}
+.options h3 {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+#data {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-gap: 5%;
+  justify-content: center;
+  padding: 5%;
+}
+
+img {
+  width: 70%;
+}
+p {
+  text-align: center;
+  margin-right: 30%;
+}

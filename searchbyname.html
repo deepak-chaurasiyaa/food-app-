@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+<div>
+   
+</div>
+</body>
+
+</html>
+
+<script type="module">
+     function oninput(){
+    import myNavbar from "./navbar.js";
+    import { getData, appendData } from './showData.js'
+    //console.log('getData,appendData', getData,appendData);
+    document.body.innerHTML = myNavbar();
+
+   var que = document.getElementById("input1").value
+   
+    let response = getData(`https://www.themealdb.com/api/json/v1/1/search.php?s=${que}`)
+    console.log(que,response);
+    response.then((data) => {
+        //console.log("dataa:",data)
+        let parent = document.getElementById('data')
+        //console.log(data);
+        appendData(data, parent);
+    })
+}
+</script>
